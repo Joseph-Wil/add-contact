@@ -18,4 +18,4 @@ export class Contact {
     toString() {
         return `${this.name}\n ${this.city}\n ${this.email}`;
     }
-}
+};
