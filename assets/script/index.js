@@ -80,6 +80,7 @@ function listContact() {
             outputDiv.appendChild(emailInput);
             gridOutput.appendChild(outputDiv);
 
+            addContact();
     }
 }
 
@@ -99,7 +100,6 @@ function deleteContact(index, outputBox) {
 
 onEvent('click', addButton, function() {
     listContact();
-    addContact();
 });
 
 
