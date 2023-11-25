@@ -21,6 +21,7 @@ const contactTracker = select('span');
 const errorMess = select('.error');
 const inputRegex = /^(.*, [a-zA-Z]{3,}.*@.+\..+)|(^.+,.+,.+)$/;
 const contacts = [];
+let trackContact = 0;
    
 
 // Functions
@@ -69,15 +70,37 @@ function listContact() {
             const emailInput = document.createElement('p');
             emailInput.innerText = `Email: ${email}`;
 
+            outputDiv.addEventListener('click', function() {
+                const index = contacts.indexOf(newContact);
+                deleteContact(index, outputDiv);
+                this.remove();
+            });
+
             outputDiv.appendChild(nameInput);
             outputDiv.appendChild(cityInput);
             outputDiv.appendChild(emailInput);
             gridOutput.appendChild(outputDiv);
+
     }
+}
+
+function addContact() {
+    trackContact ++;
+    contactTracker.innerText = `${trackContact}`;
+}
+
+function deleteContact(index, outputBox) {
+    contacts.splice(index, 1);
+    trackContact--;
+    contactTracker.innerText = `${trackContact}`;
+    outputBox.remove();
 }
 
 // Events
 
 onEvent('click', addButton, function() {
     listContact();
+    addContact();
 });
+
+

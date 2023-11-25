@@ -84,6 +84,11 @@ input.add {
     border-radius: 4px;
     font-size: 12px;
     margin: 15px 15px;
+    letter-spacing: 1px;
+}
+
+span {
+    margin-left: 5px;
 }
 
 .grid-output {
