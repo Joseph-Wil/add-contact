@@ -16,6 +16,6 @@ export class Contact {
     get email() { return this.#email; }
 
     toString() {
-        return `${this.name}\n ${this.city}\n ${this.email}`;
+        return `${this.name} ${this.city} ${this.email}`;
     }
 };

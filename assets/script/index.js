@@ -42,7 +42,6 @@ function validateInput() {
     return false;
 }
 
-
 function displayErrorMessage() {
     errorMess.innerText = 'Invalid input, please follow the example: name, city, email';
     return false;
