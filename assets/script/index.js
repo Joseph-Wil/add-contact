@@ -37,7 +37,6 @@ function validateInput() {
             return true;
         }
     }
-
     displayErrorMessage();
     return false;
 }
@@ -68,10 +67,10 @@ function listContact() {
 
             const emailInput = document.createElement('p');
             emailInput.innerText = `Email: ${email}`;
-
-            outputDiv.addEventListener('click', function() {
+            
+            onEvent('click', outputDiv, function() {
                 const index = contacts.indexOf(newContact);
-                deleteContact(index, outputDiv);
+                deleteContact(index);
                 this.remove();
             });
 
@@ -89,11 +88,10 @@ function addContact() {
     contactTracker.innerText = `${trackContact}`;
 }
 
-function deleteContact(index, outputBox) {
+function deleteContact(index) {
     contacts.splice(index, 1);
     trackContact--;
     contactTracker.innerText = `${trackContact}`;
-    outputBox.remove();
 }
 
 // Events

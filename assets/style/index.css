@@ -20,15 +20,13 @@
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
-    position: relative;
 }
 
 body {
     font-family: 'Nunito Sans', sans-serif;
     background-color: var(--app-dark-bg);
     min-height: 100vh;
-    overflow: hidden;
-    
+    position: relative;
 }
 
 h1 {
@@ -72,19 +70,19 @@ input.add {
 }
 
 .saved-contacts {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     background-color: var(--app-light-bg);
     color: #009D5D; 
-    width: 180px;
+    width: 160px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     border-radius: 4px;
     font-size: 12px;
-    margin: 15px 15px;
-    letter-spacing: 1px;
+    margin: 10px;
+    letter-spacing: 0.2px;
 }
 
 span {
@@ -125,11 +123,11 @@ span {
     padding: 15px;
     letter-spacing: 1px;
     border: solid 1px transparent;
-    transition: border 0.2s ease-in-out; 
+    transition: border 0.1s ease-in-out; 
     line-height: 30px;
 }
 
-.box:hover {
+.output-box:hover {
     cursor: pointer;
     border-color: var(--app-outline);
 }
